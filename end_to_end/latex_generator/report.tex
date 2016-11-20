@@ -1,0 +1,402 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{grffile}
+\begin{document}
+\title{Report}
+\maketitle
+\section*{Evaluation Data}
+17
+
+				\begin{table}[htbp]
+				\centering
+				\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				parser&linker&precision&recall&fscore&time(s)\\
+				\hline
+				VD&VD&0.198772129402&0.311125536204&0.231254939406&5.123223\\
+HIST&VD&0.307316452857&0.688910546393&0.413852173739&5.122853\\
+VD&W2V&0.00339839965149&0.127004404989&0.00658879750596&1.582546\\
+HIST&W2V&0.108919934297&0.822085452034&0.189070995334&1.596466\\
+IMG&VD&0.362900333791&0.629497404268&0.41561330607&5.144552\\
+IMG&W2V&0.184113823636&0.631793921668&0.271890583024&1.605754\\
+
+				\hline
+				\end{tabular}
+				\end{table}
+				 
+\section*{Performance Curve}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width = 15cm]{performance.png} 
+\end{figure}
+\section*{Outliers}
+\subsection*{Good outliers}
+filter: 0.7
+
+				\begin{table}[htbp]
+				\centering
+				\begin{tabular}{|c|c|c|}
+				\hline
+				filename&algorithm&score\\
+				\hline
+				
+				\hline
+				\end{tabular}
+				\end{table}
+				 
+\subsection*{Bad outliers}
+filter: 0.4
+
+				\begin{table}[htbp]
+				\centering
+				\begin{tabular}{|c|c|c|}
+				\hline
+				filename&algorithm&score\\
+				\hline
+				0001.jpg&VD0linker.py111VD0parser.py&0.303571428571\\
+0002.jpg&VD0linker.py111VD0parser.py&0.294117647059\\
+0004.jpg&VD0linker.py111VD0parser.py&0.219718309859\\
+0005.jpg&VD0linker.py111VD0parser.py&0.207582061951\\
+0006.jpg&VD0linker.py111VD0parser.py&0.153846153846\\
+0007.jpg&VD0linker.py111VD0parser.py&0.128834355828\\
+0031.jpg&VD0linker.py111VD0parser.py&0.368794326241\\
+0032.jpg&VD0linker.py111VD0parser.py&0.169109947644\\
+0033.jpg&VD0linker.py111VD0parser.py&0.119467477499\\
+0034.jpg&VD0linker.py111VD0parser.py&0.360967184801\\
+0035.jpg&VD0linker.py111VD0parser.py&0.258522727273\\
+0036.jpg&VD0linker.py111VD0parser.py&0.219101123596\\
+0037.jpg&VD0linker.py111VD0parser.py&0.150501672241\\
+0038.jpg&VD0linker.py111VD0parser.py&0.20979020979\\
+0039.jpg&VD0linker.py111VD0parser.py&0.28125\\
+0040.jpg&VD0linker.py111VD0parser.py&0.135135135135\\
+0057.jpg&VD0linker.py111VD0parser.py&0.351024208566\\
+0001.jpg&VD0linker.py111hist0parser.py&0.311557788945\\
+0004.jpg&VD0linker.py111hist0parser.py&0.377461706783\\
+0005.jpg&VD0linker.py111hist0parser.py&0.225292304658\\
+0006.jpg&VD0linker.py111hist0parser.py&0.347181008902\\
+0007.jpg&VD0linker.py111hist0parser.py&0.354132901135\\
+0035.jpg&VD0linker.py111hist0parser.py&0.375417130145\\
+0036.jpg&VD0linker.py111hist0parser.py&0.30985915493\\
+0037.jpg&VD0linker.py111hist0parser.py&0.320109439124\\
+0040.jpg&VD0linker.py111hist0parser.py&0.390085240018\\
+0001.jpg&W2V0linker.py111VD0parser.py&0.0135135135135\\
+0002.jpg&W2V0linker.py111VD0parser.py&0.0127906976744\\
+0004.jpg&W2V0linker.py111VD0parser.py&0.0192139737991\\
+0005.jpg&W2V0linker.py111VD0parser.py&0.0046968384227\\
+0006.jpg&W2V0linker.py111VD0parser.py&0.0\\
+0007.jpg&W2V0linker.py111VD0parser.py&0.0112359550562\\
+0031.jpg&W2V0linker.py111VD0parser.py&0.00274977085243\\
+0032.jpg&W2V0linker.py111VD0parser.py&0.010617534546\\
+0033.jpg&W2V0linker.py111VD0parser.py&0.00247868092611\\
+0034.jpg&W2V0linker.py111VD0parser.py&0.0\\
+0035.jpg&W2V0linker.py111VD0parser.py&0.0078125\\
+0036.jpg&W2V0linker.py111VD0parser.py&0.0\\
+0037.jpg&W2V0linker.py111VD0parser.py&0.00621632822213\\
+0038.jpg&W2V0linker.py111VD0parser.py&0.0\\
+0039.jpg&W2V0linker.py111VD0parser.py&0.00746876697447\\
+0040.jpg&W2V0linker.py111VD0parser.py&0.00759013282732\\
+0057.jpg&W2V0linker.py111VD0parser.py&0.0056248647869\\
+0001.jpg&W2V0linker.py111hist0parser.py&0.123257248612\\
+0002.jpg&W2V0linker.py111hist0parser.py&0.232246153846\\
+0004.jpg&W2V0linker.py111hist0parser.py&0.124250419765\\
+0005.jpg&W2V0linker.py111hist0parser.py&0.114326867957\\
+0006.jpg&W2V0linker.py111hist0parser.py&0.135103926097\\
+0007.jpg&W2V0linker.py111hist0parser.py&0.09\\
+0031.jpg&W2V0linker.py111hist0parser.py&0.213669064748\\
+0032.jpg&W2V0linker.py111hist0parser.py&0.24658411614\\
+0033.jpg&W2V0linker.py111hist0parser.py&0.167454726015\\
+0034.jpg&W2V0linker.py111hist0parser.py&0.334959477536\\
+0035.jpg&W2V0linker.py111hist0parser.py&0.221806075739\\
+0036.jpg&W2V0linker.py111hist0parser.py&0.110336538462\\
+0037.jpg&W2V0linker.py111hist0parser.py&0.131386861314\\
+0038.jpg&W2V0linker.py111hist0parser.py&0.254071661238\\
+0039.jpg&W2V0linker.py111hist0parser.py&0.29718897254\\
+0040.jpg&W2V0linker.py111hist0parser.py&0.167738844785\\
+0057.jpg&W2V0linker.py111hist0parser.py&0.249825965889\\
+0001.jpg&VD0linker.py111IMG0parser.py&0.184729064039\\
+0004.jpg&VD0linker.py111IMG0parser.py&0.155807365439\\
+0005.jpg&VD0linker.py111IMG0parser.py&0.294079443015\\
+0006.jpg&VD0linker.py111IMG0parser.py&0.0973782771536\\
+0007.jpg&VD0linker.py111IMG0parser.py&0.125\\
+0001.jpg&W2V0linker.py111IMG0parser.py&0.193069306931\\
+0002.jpg&W2V0linker.py111IMG0parser.py&0.376999238385\\
+0004.jpg&W2V0linker.py111IMG0parser.py&0.171083217108\\
+0005.jpg&W2V0linker.py111IMG0parser.py&0.195761376521\\
+0006.jpg&W2V0linker.py111IMG0parser.py&0.0860335195531\\
+0031.jpg&W2V0linker.py111IMG0parser.py&0.353645340187\\
+0033.jpg&W2V0linker.py111IMG0parser.py&0.19014084507\\
+0034.jpg&W2V0linker.py111IMG0parser.py&0.309109009457\\
+0035.jpg&W2V0linker.py111IMG0parser.py&0.291176470588\\
+0036.jpg&W2V0linker.py111IMG0parser.py&0.272207084469\\
+0037.jpg&W2V0linker.py111IMG0parser.py&0.142408376963\\
+0038.jpg&W2V0linker.py111IMG0parser.py&0.121539500338\\
+0039.jpg&W2V0linker.py111IMG0parser.py&0.280580075662\\
+0040.jpg&W2V0linker.py111IMG0parser.py&0.151537335286\\
+0057.jpg&W2V0linker.py111IMG0parser.py&0.388372956909\\
+
+				\hline
+				\end{tabular}
+				\end{table}
+				 
+\newpage
+
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111VD0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111VD0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of VD0linker.py111VD0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111VD0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111VD0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of VD0linker.py111VD0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111hist0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111hist0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of VD0linker.py111hist0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111hist0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111hist0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of VD0linker.py111hist0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111VD0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111VD0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of W2V0linker.py111VD0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111VD0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111VD0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of W2V0linker.py111VD0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111hist0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111hist0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of W2V0linker.py111hist0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111hist0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111hist0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of W2V0linker.py111hist0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111IMG0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111IMG0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of VD0linker.py111IMG0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111IMG0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{VD0linker.py111IMG0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of VD0linker.py111IMG0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111IMG0parser.py.best.png}
+					  \caption{best result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111IMG0parser.py.gt.best.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{best result of W2V0linker.py111IMG0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+					\begin{figure}
+					\centering
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111IMG0parser.py.worst.png}
+					  \caption{worst result}
+					  \label{fig:sub1}
+					\end{subfigure}%
+					\begin{subfigure}{.5\textwidth}
+					  \centering
+					  \includegraphics[width=10cm]
+					{W2V0linker.py111IMG0parser.py.gt.worst.png}
+					  \caption{ground truth}
+					  \label{fig:sub2}
+					\end{subfigure}
+					\caption
+					{worst result of W2V0linker.py111IMG0parser.py}
+					\label{fig:test}
+					\end{figure}
+					
+\end{document}
